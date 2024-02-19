@@ -1,0 +1,12 @@
+
+import 'package:flutter/services.dart';
+import 'shared_preference_manager.dart';
+
+class AppManager {
+  static Future<void> initialize() async {
+    await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    
+    await SharedPreferencesManager.init();
+    
+  }
+}
